@@ -6,7 +6,7 @@ export type SortOrder = 'asc' | 'desc';
 export const usePropertySearch = (
   properties: Property[],
   searchQuery: string,
-  sortOrder: SortOrder
+  sortOrder: SortOrder,
 ) => {
   const sortedAndFilteredProperties = useMemo(() => {
     // 1. Filter
@@ -14,9 +14,10 @@ export const usePropertySearch = (
 
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase().trim();
-      result = result.filter((property) =>
-        property.title.toLowerCase().includes(query) ||
-        property.location.toLowerCase().includes(query)
+      result = result.filter(
+        (property) =>
+          property.title.toLowerCase().includes(query) ||
+          property.location.toLowerCase().includes(query),
       );
     }
 

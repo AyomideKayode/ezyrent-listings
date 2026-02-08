@@ -11,7 +11,11 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
 
-  const filteredProperties = usePropertySearch(properties, searchQuery, sortOrder);
+  const filteredProperties = usePropertySearch(
+    properties,
+    searchQuery,
+    sortOrder,
+  );
 
   return (
     <div className='min-h-screen bg-gray-50 font-sans text-gray-900'>

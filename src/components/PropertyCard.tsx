@@ -37,7 +37,7 @@ export const PropertyCard = ({ property, onClick }: PropertyCardProps) => {
       </div>
 
       {/* Content Section */}
-      <div className='p-5 flex flex-col flex-grow'>
+      <div className='p-5 flex flex-col grow'>
         <div className='mb-3'>
           <h3 className='text-lg font-bold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition-colors font-sans'>
             {property.title}
