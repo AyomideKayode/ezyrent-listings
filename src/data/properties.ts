@@ -9,7 +9,7 @@ export const properties: Property[] = [
     bedrooms: 5,
     bathrooms: 3,
     amenities: ["Swimming Pool", "Gym", "24/7 Power", "Security"],
-    image: "https://images.unsplash.com/photo-1600596542815-e32c630bd138?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
     description: "A stunning 5-bedroom detached duplex with a private pool, modern finishings, and located in a serene environment."
   },
   {
@@ -42,7 +42,7 @@ export const properties: Property[] = [
     bedrooms: 4,
     bathrooms: 3,
     amenities: ["Swimming Pool", "Gym", "24/7 Power", "Smart Home Features"],
-    image: "https://images.unsplash.com/photo-1600596542815-e32c630bd138?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
     description: "Luxury living at its finest. This terrace duplex offers premium amenities and a prime location."
   },
   {
