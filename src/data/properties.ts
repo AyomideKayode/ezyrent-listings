@@ -4,7 +4,7 @@ export const properties: Property[] = [
   {
     id: 1,
     title: "Luxury Villa in Lekki Phase 1",
-    price: 350000000,
+    price: 35000000,
     location: "Lekki, Lagos",
     bedrooms: 5,
     amenities: ["Swimming Pool", "Gym", "24/7 Power", "Security"],
@@ -14,7 +14,7 @@ export const properties: Property[] = [
   {
     id: 2,
     title: "Modern Apartment in Ikeja GRA",
-    price: 85000000,
+    price: 8500000,
     location: "Ikeja, Lagos",
     bedrooms: 3,
     amenities: ["Elevator", "Parking", "WiFi", "Security"],
@@ -34,7 +34,7 @@ export const properties: Property[] = [
   {
     id: 4,
     title: "Exquisite 4-Bedroom Terrace in Victoria Island",
-    price: 250000000,
+    price: 25000000,
     location: "Victoria Island, Lagos",
     bedrooms: 4,
     amenities: ["Swimming Pool", "Gym", "24/7 Power", "Smart Home Features"],
@@ -54,7 +54,7 @@ export const properties: Property[] = [
   {
     id: 6,
     title: "Penthouse in Banana Island",
-    price: 800000000,
+    price: 80000000,
     location: "Banana Island, Lagos",
     bedrooms: 4,
     amenities: ["Private Elevator", "Rooftop Terrace", "Cinema", "Gym"],
