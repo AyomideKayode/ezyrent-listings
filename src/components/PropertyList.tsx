@@ -4,14 +4,10 @@ import { SearchX } from 'lucide-react';
 
 interface PropertyListProps {
   properties: Property[];
+  onPropertySelect: (property: Property) => void;
 }
 
-export const PropertyList = ({ properties }: PropertyListProps) => {
-  const handlePropertyClick = (property: Property) => {
-    // will wire this up to the Modal later, for now I'll just log the clicked property
-    console.log('Clicked:', property.title);
-  };
-
+export const PropertyList = ({ properties, onPropertySelect }: PropertyListProps) => {
   if (properties.length === 0) {
     return (
       <div className='flex flex-col items-center justify-center py-20 text-center px-4'>
@@ -35,7 +31,7 @@ export const PropertyList = ({ properties }: PropertyListProps) => {
         <PropertyCard
           key={property.id}
           property={property}
-          onClick={handlePropertyClick}
+          onClick={onPropertySelect}
         />
       ))}
     </div>

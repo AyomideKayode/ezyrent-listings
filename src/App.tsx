@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { PropertyList } from './components/PropertyList';
+import { PropertyModal } from './components/PropertyModal';
 import { SkeletonCard } from './components/SkeletonCard';
 import { FilterBar } from './components/FilterBar';
 import { useProperties } from './hooks/useProperties';
 import { usePropertySearch, type SortOrder } from './hooks/usePropertySearch';
+import type { Property } from './types';
 import { TriangleAlert } from 'lucide-react';
 
 function App() {
   const { properties, loading, error } = useProperties();
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
 
   const filteredProperties = usePropertySearch(
     properties,
@@ -63,9 +66,20 @@ function App() {
             ))}
           </div>
         ) : (
-          <PropertyList properties={filteredProperties} />
+          <PropertyList
+            properties={filteredProperties}
+            onPropertySelect={setSelectedProperty}
+          />
         )}
       </main>
+
+      {/* Modal */}
+      {selectedProperty && (
+        <PropertyModal
+          selectedProperty={selectedProperty}
+          onClose={() => setSelectedProperty(null)}
+        />
+      )}
     </div>
   );
 }
