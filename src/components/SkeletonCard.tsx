@@ -5,7 +5,7 @@ export const SkeletonCard = () => {
       <div className='h-52 w-full bg-gray-200' />
 
       {/* Content Skeleton */}
-      <div className='p-5 flex flex-col flex-grow space-y-4'>
+      <div className='p-5 flex flex-col grow space-y-4'>
         {/* Title & Location */}
         <div className='space-y-2'>
           <div className='h-6 bg-gray-200 rounded w-3/4' />

@@ -13,7 +13,9 @@ function App() {
   const { properties, loading, error } = useProperties();
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(
+    null,
+  );
 
   const filteredProperties = usePropertySearch(
     properties,
@@ -31,7 +33,7 @@ function App() {
       {/* Simple Header */}
       <header className='bg-white/80 backdrop-blur-md sticky top-0 z-10 border-b border-gray-100'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between'>
-          <h1 className='text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent'>
+          <h1 className='text-2xl font-bold bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent'>
             EzyRent
           </h1>
         </div>

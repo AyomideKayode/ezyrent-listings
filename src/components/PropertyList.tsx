@@ -6,7 +6,10 @@ interface PropertyListProps {
   onPropertySelect: (property: Property) => void;
 }
 
-export const PropertyList = ({ properties, onPropertySelect }: PropertyListProps) => {
+export const PropertyList = ({
+  properties,
+  onPropertySelect,
+}: PropertyListProps) => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
       {properties.map((property) => (

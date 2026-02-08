@@ -43,13 +43,13 @@ export const PropertyModal = ({ selectedProperty, onClose }: PropertyModalProps)
             alt={selectedProperty.title}
             className='w-full h-full object-cover'
           />
-          <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 pt-20'>
+          <div className='absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/60 to-transparent p-6 pt-20'>
             <h2 className='text-2xl font-bold text-white mb-1 drop-shadow-sm font-sans'>
               {selectedProperty.title}
             </h2>
-             <div className='flex items-center text-white/90 text-sm font-medium'>
-                <MapPin className='w-4 h-4 mr-1.5' />
-                {selectedProperty.location}
+            <div className='flex items-center text-white/90 text-sm font-medium'>
+              <MapPin className='w-4 h-4 mr-1.5' />
+              {selectedProperty.location}
             </div>
           </div>
         </div>
@@ -57,24 +57,24 @@ export const PropertyModal = ({ selectedProperty, onClose }: PropertyModalProps)
         {/* Content */}
         <div className='p-6 overflow-y-auto'>
           <div className='flex items-center justify-between mb-6'>
-             <div>
-                <span className='text-3xl font-bold text-blue-600 font-mono'>
-                  {formatPrice(selectedProperty.price)}
-                </span>
-                <span className='text-sm font-medium text-gray-500 ml-1'>/year</span>
-             </div>
+            <div>
+              <span className='text-3xl font-bold text-blue-600 font-mono'>
+                {formatPrice(selectedProperty.price)}
+              </span>
+              <span className='text-sm font-medium text-gray-500 ml-1'>/year</span>
+            </div>
 
-             {/* Key Details */}
-             <div className='flex gap-4'>
-                 <div className='flex items-center px-3 py-1.5 bg-blue-50 rounded-lg text-blue-700 font-medium text-sm'>
-                    <Bed className='w-4 h-4 mr-2' />
-                    {selectedProperty.bedrooms} Beds
-                 </div>
-                 <div className='flex items-center px-3 py-1.5 bg-blue-50 rounded-lg text-blue-700 font-medium text-sm'>
-                    <Bath className='w-4 h-4 mr-2' />
-                    {selectedProperty.bathrooms} Baths
-                 </div>
-             </div>
+            {/* Key Details */}
+            <div className='flex gap-4'>
+              <div className='flex items-center px-3 py-1.5 bg-blue-50 rounded-lg text-blue-700 font-medium text-sm'>
+                <Bed className='w-4 h-4 mr-2' />
+                {selectedProperty.bedrooms} Beds
+              </div>
+              <div className='flex items-center px-3 py-1.5 bg-blue-50 rounded-lg text-blue-700 font-medium text-sm'>
+                <Bath className='w-4 h-4 mr-2' />
+                {selectedProperty.bathrooms} Baths
+              </div>
+            </div>
           </div>
 
           <div className='space-y-4'>
@@ -86,32 +86,32 @@ export const PropertyModal = ({ selectedProperty, onClose }: PropertyModalProps)
             </div>
 
             {selectedProperty.amenities && selectedProperty.amenities.length > 0 && (
-                <div>
-                   <h3 className='text-lg font-semibold text-gray-900 mb-3'>Amenities</h3>
-                   <div className='flex flex-wrap gap-2'>
-                      {selectedProperty.amenities.map((amenity, index) => (
-                        <span
-                          key={index}
-                          className='px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium'
-                        >
-                          {amenity}
-                        </span>
-                      ))}
-                   </div>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-900 mb-3'>Amenities</h3>
+                <div className='flex flex-wrap gap-2'>
+                  {selectedProperty.amenities.map((amenity, index) => (
+                    <span
+                      key={index}
+                      className='px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium'
+                    >
+                      {amenity}
+                    </span>
+                  ))}
                 </div>
+              </div>
             )}
           </div>
         </div>
 
         {/* Footer Actions */}
         <div className='p-6 border-t border-gray-100 bg-gray-50 shrink-0'>
-           <button
-             onClick={() => window.alert('Booking feature coming soon!')}
-             className='w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2'
-           >
-             Book Viewing
-             <ArrowRight className='w-5 h-5' />
-           </button>
+          <button
+            onClick={() => window.alert('Booking feature coming soon!')}
+            className='w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2'
+          >
+            Book Viewing
+            <ArrowRight className='w-5 h-5' />
+          </button>
         </div>
 
       </div>
