@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import { PropertyList } from './components/PropertyList';
 import { SkeletonCard } from './components/SkeletonCard';
+import { FilterBar } from './components/FilterBar';
 import { useProperties } from './hooks/useProperties';
+import { usePropertySearch, type SortOrder } from './hooks/usePropertySearch';
 import { TriangleAlert } from 'lucide-react';
 
 function App() {
   const { properties, loading, error } = useProperties();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
+
+  const filteredProperties = usePropertySearch(properties, searchQuery, sortOrder);
 
   return (
     <div className='min-h-screen bg-gray-50 font-sans text-gray-900'>
@@ -28,6 +35,13 @@ function App() {
           </p>
         </div>
 
+        <FilterBar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          sortOrder={sortOrder}
+          setSortOrder={setSortOrder}
+        />
+
         {error ? (
           <div className='text-center py-20'>
             <div className='inline-block p-4 rounded-full bg-red-50 text-red-500 mb-4'>
@@ -45,7 +59,7 @@ function App() {
             ))}
           </div>
         ) : (
-          <PropertyList properties={properties} />
+          <PropertyList properties={filteredProperties} />
         )}
       </main>
     </div>
