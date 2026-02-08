@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { PropertyList } from './components/PropertyList';
 import { PropertyModal } from './components/PropertyModal';
 import { SkeletonCard } from './components/SkeletonCard';
+import { EmptyState } from './components/EmptyState';
 import { FilterBar } from './components/FilterBar';
 import { useProperties } from './hooks/useProperties';
 import { usePropertySearch, type SortOrder } from './hooks/usePropertySearch';
@@ -19,6 +20,11 @@ function App() {
     searchQuery,
     sortOrder,
   );
+
+  const handleReset = () => {
+    setSearchQuery('');
+    setSortOrder('asc');
+  };
 
   return (
     <div className='min-h-screen bg-gray-50 font-sans text-gray-900'>
@@ -65,6 +71,8 @@ function App() {
               <SkeletonCard key={i} />
             ))}
           </div>
+        ) : filteredProperties.length === 0 ? (
+          <EmptyState onReset={handleReset} />
         ) : (
           <PropertyList
             properties={filteredProperties}

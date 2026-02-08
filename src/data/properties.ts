@@ -7,8 +7,8 @@ export const properties: Property[] = [
     price: 35000000,
     location: "Lekki, Lagos",
     bedrooms: 5,
-    bathrooms: 3,
-    amenities: ["Swimming Pool", "Gym", "24/7 Power", "Security"],
+    bathrooms: 5,
+    amenities: ["Swimming Pool", "Gym", "24/7 Power", "Security", "BQ"],
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
     description: "A stunning 5-bedroom detached duplex with a private pool, modern finishings, and located in a serene environment."
   },
@@ -18,8 +18,8 @@ export const properties: Property[] = [
     price: 8500000,
     location: "Ikeja, Lagos",
     bedrooms: 3,
-    bathrooms: 2,
-    amenities: ["Elevator", "Parking", "WiFi", "Security"],
+    bathrooms: 3,
+    amenities: ["Elevator", "Parking", "WiFi", "Security", "Pool"],
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
     description: "Spacious 3-bedroom apartment in the heart of Ikeja GRA. Close to major malls and the airport."
   },
@@ -31,7 +31,7 @@ export const properties: Property[] = [
     bedrooms: 1,
     bathrooms: 1,
     amenities: ["Water Treatment", "Security", "Parking"],
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
     description: "Perfect for young professionals or students. Located near Unilag and major tech hubs."
   },
   {
@@ -40,9 +40,9 @@ export const properties: Property[] = [
     price: 25000000,
     location: "Victoria Island, Lagos",
     bedrooms: 4,
-    bathrooms: 3,
+    bathrooms: 4,
     amenities: ["Swimming Pool", "Gym", "24/7 Power", "Smart Home Features"],
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600596542815-3ad4dc42799f?auto=format&fit=crop&w=800&q=80",
     description: "Luxury living at its finest. This terrace duplex offers premium amenities and a prime location."
   },
   {
@@ -53,18 +53,117 @@ export const properties: Property[] = [
     bedrooms: 2,
     bathrooms: 2,
     amenities: ["Serviced", "24/7 Power", "Security", "Parking"],
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
     description: "Fully serviced apartment with all bills included. Ideal for expatriates."
   },
   {
     id: 6,
     title: "Penthouse in Banana Island",
-    price: 80000000,
+    price: 120000000,
     location: "Banana Island, Lagos",
     bedrooms: 4,
-    bathrooms: 4,
-    amenities: ["Private Elevator", "Rooftop Terrace", "Cinema", "Gym"],
+    bathrooms: 5,
+    amenities: ["Private Elevator", "Rooftop Terrace", "Cinema", "Gym", "Concierge"],
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
     description: "Exclusive penthouse with breathtaking views of the lagoon. Top-tier security and privacy."
+  },
+  {
+    id: 7,
+    title: "Family Duplex in Surulere",
+    price: 2200000,
+    location: "Surulere, Lagos",
+    bedrooms: 3,
+    bathrooms: 3,
+    amenities: ["Parking", "Security", "Water Treatment"],
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b91d?auto=format&fit=crop&w=800&q=80",
+    description: "A nice 3-bedroom duplex in a quiet estate in Surulere. Easy access to the island."
+  },
+  {
+    id: 8,
+    title: "Executive Suite in Maryland",
+    price: 2800000,
+    location: "Maryland, Lagos",
+    bedrooms: 2,
+    bathrooms: 2,
+    amenities: ["24/7 Power", "Security", "Gym"],
+    image: "https://images.unsplash.com/photo-1502005229762-cf1afd513ef9?auto=format&fit=crop&w=800&q=80",
+    description: "Modern executive suite suitable for business travelers and small families."
+  },
+  {
+    id: 9,
+    title: "Waterfront Mansion in Ikoyi",
+    price: 150000000,
+    location: "Ikoyi, Lagos",
+    bedrooms: 6,
+    bathrooms: 7,
+    amenities: ["Jetty", "Cinema", "Pool", "Smart Home", "Elevator"],
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+    description: "A masterpiece of architecture located on the waterfront of Ikoyi."
+  },
+  {
+    id: 10,
+    title: "Compact Flat in Akoka",
+    price: 1800000,
+    location: "Yaba, Lagos",
+    bedrooms: 2,
+    bathrooms: 1,
+    amenities: ["Security", "Parking", "Water"],
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80",
+    description: "Newly built 2-bedroom flat in Akoka, close to Unilag campus."
+  },
+  {
+    id: 11,
+    title: "Semi-Detached Duplex in Magodo",
+    price: 6000000,
+    location: "Magodo, Lagos",
+    bedrooms: 4,
+    bathrooms: 4,
+    amenities: ["Security", "Estate Park", "24/7 Power"],
+    image: "https://images.unsplash.com/photo-1484154218962-a1c00207099b?auto=format&fit=crop&w=800&q=80",
+    description: "Spacious semi-detached duplex in the secure Magodo GRA Phase 2."
+  },
+  {
+    id: 12,
+    title: "Luxury Apartment in Eko Atlantic",
+    price: 45000000,
+    location: "Victoria Island, Lagos",
+    bedrooms: 3,
+    bathrooms: 3,
+    amenities: ["Ocean View", "Pool", "Gym", "Spa", "Concierge"],
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+    description: "World-class living in Eko Atlantic City with panoramic ocean views."
+  },
+  {
+    id: 13,
+    title: "Bungalow in Gbagada",
+    price: 3000000,
+    location: "Gbagada, Lagos",
+    bedrooms: 3,
+    bathrooms: 2,
+    amenities: ["Large Compound", "Security", "Water Treatment"],
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+    description: "Detached bungalow with ample parking space in Gbagada Phase 2."
+  },
+  {
+    id: 14,
+    title: "Smart Home in Ikate",
+    price: 12000000,
+    location: "Lekki, Lagos",
+    bedrooms: 4,
+    bathrooms: 4,
+    amenities: ["Automated", "Pool", "Gym", "Cinema"],
+    image: "https://images.unsplash.com/photo-1558036117-15d82a90b9f1?auto=format&fit=crop&w=800&q=80",
+    description: "Contemporary smart home in Ikate Elegushi with premium fittings."
+  },
+  {
+    id: 15,
+    title: "Studio Apartment in Fadeyi",
+    price: 1200000,
+    location: "Yaba, Lagos",
+    bedrooms: 1,
+    bathrooms: 1,
+    amenities: ["Water", "Security"],
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+    description: "Affordable studio apartment in Fadeyi, close to Ikorodu road."
   }
 ];
